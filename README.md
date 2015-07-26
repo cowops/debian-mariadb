@@ -11,8 +11,12 @@ This role requires a debian compliant system such as ubuntu.
 Role Variables
 --------------
 
-mariadb_gpg_key_id: cbcb082a1bb943db
-mariadb_series_version: '10.1'
+debian:
+    version: wheezy
+mariadb:
+    gpg_key_id: cbcb082a1bb943db
+    series_version: '10.1'
+    mirror: ftp.igh.cnrs.fr/pub
 
 Dependencies
 ------------
@@ -24,7 +28,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: loranger.debian-mariadb, mariadb_gpg_key_id: cbcb082a1bb943db, mariadb_series_version: '10.1' }
+         - { role: loranger.debian-mariadb, debian.version: wheezy, mariadb.gpg_key_id: cbcb082a1bb943db, mariadb.series_version: '10.1', mariadb.mirror: 'ftp.igh.cnrs.fr/pub' }
 
 Tasks
 -----
