@@ -28,14 +28,14 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: loranger.debian-mariadb, debian.version: wheezy, mariadb.gpg_key_id: cbcb082a1bb943db, mariadb.series_version: '10.1', mariadb.mirror: 'ftp.igh.cnrs.fr/pub' }
+         - { role: cowops.debian-mariadb, debian.version: wheezy, mariadb.gpg_key_id: cbcb082a1bb943db, mariadb.series_version: '10.1', mariadb.mirror: 'ftp.igh.cnrs.fr/pub' }
 
 Tasks
 -----
 
   - Install [MariaDB](https://mariadb.org/en/) server
   - Install [mytop](http://jeremy.zawodny.com/mysql/mytop/)
-  
+
 
 License
 -------
