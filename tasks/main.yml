@@ -11,3 +11,8 @@
   with_items:
       - mariadb-server
   notify: restart mariadb
+
+- name: install useful packages
+  apt: pkg={{ item }} state=latest update_cache=yes
+  with_items:
+    - python-mysqldb
