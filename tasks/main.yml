@@ -7,12 +7,21 @@
   apt_repository: repo='deb http://{{ mariadb.mirror }}/mariadb/repo/{{ mariadb.series_version }}/debian {{ debian.version }} main' state=present
 
 - name: install mariadb packages
-  apt: pkg={{ item }} state=latest update_cache=yes force=yes
-  with_items:
+  apt:
+    name: {{ packages }}
+    state: latest
+    update_cache: yes
+    force: yes
+  vars:
+    packages:
       - mariadb-server
   notify: restart mariadb
 
 - name: install useful packages
-  apt: pkg={{ item }} state=latest update_cache=yes
-  with_items:
-    - python-mysqldb
+  apt:
+    name: {{ packages }}
+    state: latest
+    update_cache: yes
+  vars:
+    packages:
+      - python-mysqldb
