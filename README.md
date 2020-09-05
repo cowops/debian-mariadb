@@ -12,10 +12,9 @@ Role Variables
 --------------
 
 debian:
-    version: stretch
+    version: buster
 mariadb:
-    gpg_key_id: F1656F24C74CD1D8
-    series_version: '10.2'
+    series_version: '10.5'
     mirror: ftp.igh.cnrs.fr/pub
 
 Dependencies
@@ -28,7 +27,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: cowops.debian-mariadb, debian.version: stretch, mariadb.gpg_key_id: F1656F24C74CD1D8, mariadb.series_version: '10.2', mariadb.mirror: 'ftp.igh.cnrs.fr/pub' }
+         - { role: cowops.debian-mariadb, debian.version: stretch, mariadb.series_version: '10.5', mariadb.mirror: 'ftp.igh.cnrs.fr/pub' }
 
 Tasks
 -----

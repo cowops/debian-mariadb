@@ -1,6 +1,6 @@
 ---
 - name: install mariadb gpg key
-  apt_key: url='http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x{{ mariadb.gpg_key_id }}' state=present
+  apt_key: url='https://mariadb.org/mariadb_release_signing_key.asc' state=present
   # apt_key: keyserver="keyserver.ubuntu.com" id={{ mariadb.gpg_key_id }} state=present # Ansible 1.6
 
 - name: add mariadb deb repository
