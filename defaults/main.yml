@@ -2,4 +2,4 @@ debian:
     version: buster
 mariadb:
     series_version: '10.5'
-    mirror: ftp.igh.cnrs.fr/pub
+    mirror: mirror.mva-n.net
