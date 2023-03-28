@@ -24,4 +24,4 @@
     update_cache: yes
   vars:
     packages:
-      - python-mysqldb
+      - python3-mysqldb
