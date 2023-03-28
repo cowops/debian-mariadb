@@ -1,3 +1,3 @@
 mariadb:
-    series_version: '10.5'
-    mirror: mirror.mva-n.net
+    series_version: '10.11'
+    mirror: https://mirrors.ircam.fr/pub/
