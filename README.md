@@ -11,8 +11,6 @@ This role requires a debian compliant system such as ubuntu.
 Role Variables
 --------------
 
-debian:
-    version: buster
 mariadb:
     series_version: '10.5'
     mirror: ftp.igh.cnrs.fr/pub
@@ -27,7 +25,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: cowops.debian-mariadb, debian.version: stretch, mariadb.series_version: '10.5', mariadb.mirror: 'ftp.igh.cnrs.fr/pub' }
+         - { role: cowops.debian-mariadb, mariadb.series_version: '10.5', mariadb.mirror: 'ftp.igh.cnrs.fr/pub' }
 
 Tasks
 -----

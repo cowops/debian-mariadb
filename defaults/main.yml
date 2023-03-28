@@ -1,5 +1,3 @@
-debian:
-    version: buster
 mariadb:
     series_version: '10.5'
     mirror: mirror.mva-n.net
